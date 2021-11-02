@@ -7,10 +7,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     Button next,url,phone,data;
+    EditText name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         url=findViewById(R.id.url);
         phone=findViewById(R.id.dial);
         data=findViewById(R.id.data);
+        name=findViewById(R.id.name);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_DIAL);
                 i.setData(Uri.parse("tel:"+number));
                 startActivity(i);
+            }
+        });
+
+        data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String temp=name.getText().toString();
+                Intent intent=new Intent(MainActivity.this,MainActivity3.class);
+                intent.putExtra("name",temp);
+                startActivity(intent);
             }
         });
     }
