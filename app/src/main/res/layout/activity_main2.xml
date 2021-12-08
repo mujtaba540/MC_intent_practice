@@ -28,55 +28,40 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.98" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineBottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="496dp" />
-
-    <TextView
-        android:id="@+id/message"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="Second Activity"
-        android:textColor="@color/black"
-        android:textSize="12dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/result"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
-        app:layout_constraintVertical_bias="0.804" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="663dp" />
 
     <Button
-        android:id="@+id/back"
+        android:id="@+id/dialogue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
-        android:text="Move Back to Main Activity"
-        app:backgroundTint="#8BC34A"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft" />
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="32dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
 
-    <TextView
-        android:id="@+id/result"
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:text="Data Passed will be shown here"
-        android:fontFamily="monospace"
-        android:textColor="@color/black"
-        android:textSize="12dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/back"
+        android:layout_marginTop="32dp"
+        android:text="Button"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft" />
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toEndOf="@+id/dialogue"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="269dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
