@@ -8,13 +8,13 @@ import android.os.Bundle;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    Toolbar t;
+    Toolbar tool;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-        t=findViewById(R.id.t1);
-        setSupportActionBar(t);
+        tool=findViewById(R.id.t1);
+        setSupportActionBar(tool);
 
         // Get a support ActionBar corresponding to this toolbar
         ActionBar ab = getSupportActionBar();
